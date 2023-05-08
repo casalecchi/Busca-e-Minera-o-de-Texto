@@ -1,0 +1,60 @@
+2023-05-08 19:47:26,135 - Log created.
+2023-05-08 19:47:26,135 - Module processing_queries started.
+2023-05-08 19:47:26,135 - Started reading the configuration file.
+2023-05-08 19:47:26,135 - Finished reading the configuration file.
+2023-05-08 19:47:26,135 - Parsing the xml queries file.
+2023-05-08 19:47:26,139 - XML file parsed.
+2023-05-08 19:47:26,139 - Starting the generation of queries csv file.
+2023-05-08 19:47:26,139 - 99 queries processed.
+2023-05-08 19:47:26,139 - Mean of the time each query has taken to be processedin queries file: 0:00:00.000002s
+2023-05-08 19:47:26,139 - Queries csv file generated.
+2023-05-08 19:47:26,139 - Starting the generation of expected csv file.
+2023-05-08 19:47:26,142 - Mean of the time each query has taken to be processed in expected file: 0:00:00.000018s
+2023-05-08 19:47:26,142 - Expected csv file generated.
+2023-05-08 19:47:26,142 - Module processing_queries finished execution.
+2023-05-08 19:47:26,142 - Module generate_inverse_list started.
+2023-05-08 19:47:26,142 - Started reading the configuration file.
+2023-05-08 19:47:26,142 - Finished reading the configuration file.
+2023-05-08 19:47:26,142 - Started creating the inverted list file.
+2023-05-08 19:47:26,142 - Started creating the inverted list.
+2023-05-08 19:47:26,142 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf74.xml
+2023-05-08 19:47:26,163 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf74.xml. 167 records in file. Time taken: 0:00:00.021079s
+2023-05-08 19:47:26,323 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf75.xml
+2023-05-08 19:47:26,335 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf75.xml. 188 records in file. Time taken: 0:00:00.012424s
+2023-05-08 19:47:26,525 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf76.xml
+2023-05-08 19:47:26,544 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf76.xml. 227 records in file. Time taken: 0:00:00.019091s
+2023-05-08 19:47:26,768 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf77.xml
+2023-05-08 19:47:26,782 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf77.xml. 199 records in file. Time taken: 0:00:00.013925s
+2023-05-08 19:47:26,978 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf78.xml
+2023-05-08 19:47:26,998 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf78.xml. 199 records in file. Time taken: 0:00:00.020325s
+2023-05-08 19:47:27,175 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf79.xml
+2023-05-08 19:47:27,188 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf79.xml. 259 records in file. Time taken: 0:00:00.012792s
+2023-05-08 19:47:27,432 - 6 files procesed. Average time: 0:00:00.214978s.
+2023-05-08 19:47:27,432 - Finished creating the inverted list.
+2023-05-08 19:47:27,438 - Finished creating the inverted list file.
+2023-05-08 19:47:27,439 - Module processing_queries finished execution.
+2023-05-08 19:47:27,439 - Module indexer started.
+2023-05-08 19:47:31,406 - Started reading the configuration file.
+2023-05-08 19:47:31,408 - Finished reading the configuration file.
+2023-05-08 19:47:31,408 - Started generating the term document matrix.
+2023-05-08 19:47:36,693 - Finished generating the term document matrix. Time taken: 0:00:05.285359.
+2023-05-08 19:47:36,694 - Matrix has 6278 tokens and 1215 documents.
+2023-05-08 19:47:38,736 - Term document matrix saved.
+2023-05-08 19:47:38,736 - Started generating the model with tf normalized. The model usually takes 4~7 minutes to be created.
+2023-05-08 19:53:15,390 - Finished generating the model. Time taken: 0:05:36.653581.
+2023-05-08 19:53:16,856 - Model saved.
+2023-05-08 19:53:16,868 - Module indexer finished execution.
+2023-05-08 19:53:16,868 - Module searcher started.
+2023-05-08 19:53:16,868 - Started reading the configuration file.
+2023-05-08 19:53:16,869 - Finished reading the configuration file.
+2023-05-08 19:53:16,869 - Loading model.
+2023-05-08 19:53:17,124 - Model loaded.
+2023-05-08 19:53:17,124 - Loading queries.
+2023-05-08 19:53:17,139 - Queries loaded.
+2023-05-08 19:53:17,139 - Started getting rankings of each query by each document.
+2023-05-08 19:53:17,139 - Inserting queries in model.
+2023-05-08 19:53:17,587 - Queries inserted in model. Time taken: 0:00:00.447920
+2023-05-08 19:53:21,001 - Rankings created. Time taken: 0:00:03.862236
+2023-05-08 19:53:21,003 - Generating the results file. CSV format file with 'QueryNumber; [position in ranking, doc_number, value of sim_cos]'.
+2023-05-08 19:53:21,068 - Results file created.
+2023-05-08 19:53:21,068 - Module searcher finished exectuion.

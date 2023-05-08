@@ -1,4 +1,5 @@
 from datetime import datetime
+from tqdm import tqdm
 import sys
 import logging
 import pandas as pd
@@ -89,7 +90,7 @@ def get_model(matrix, type_tf="tf"):
     start_time = datetime.now()
 
     weights = matrix.copy()
-    for token in weights.index:
+    for token in tqdm(weights.index):
         idf = get_idf(token, weights)
         for document in weights.columns:
             tf = get_tfn(token, document, matrix) if type_tf == "tfn" else get_tfn(token, document, matrix) 

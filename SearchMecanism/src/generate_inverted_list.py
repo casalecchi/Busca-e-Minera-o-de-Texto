@@ -149,3 +149,9 @@ def get_tokens_file(read_files, path):
         for token in tokens:
             w_file.write(f"{token};{inverted_list[token]}\n")
     logging.info(f"Finished creating the inverted list file.")
+
+
+logging.info("Downloading 'punkt' and 'stopwords' from nltk-data...")
+nltk.download('punkt')
+nltk.download('stopwords')
+logging.info("Finished downloading 'punkt' and 'stopwords'.")
