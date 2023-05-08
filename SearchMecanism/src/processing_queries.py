@@ -87,11 +87,3 @@ def get_expected_file(path, xml_root):
     mean = np.mean(times)
     logging.info(f"Mean of the time each query has taken to be processed in expected file: {mean}s")
     logging.info("Expected csv file generated.")
-
-
-logging.basicConfig(filename='../results/pc.log', filemode='w',format='%(asctime)s - %(message)s', level=logging.INFO)
-logging.info("Log created.")
-read, queries, expected = read_config("pc.cfg")
-xml_root = get_xml_root(read)
-get_queries_file(queries, xml_root)
-get_expected_file(expected, xml_root)

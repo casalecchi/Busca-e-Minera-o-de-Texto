@@ -78,7 +78,7 @@ def get_idf(token, matrix):
     return log10(get_n(matrix) / get_nj(token, matrix))
 
 
-def get_model(matrix, type_tf):
+def get_model(matrix, type_tf="tf"):
     msg = "Started generating the model with tf"
     if type_tf == "tf":
         msg += "."
@@ -92,7 +92,7 @@ def get_model(matrix, type_tf):
     for token in weights.index:
         idf = get_idf(token, weights)
         for document in weights.columns:
-            tf = get_tf(token, document, matrix) if type_tf == "tf" else get_tfn(token, document, matrix) 
+            tf = get_tfn(token, document, matrix) if type_tf == "tfn" else get_tfn(token, document, matrix) 
             wij = tf * idf
             weights.loc[token, str(document)] = wij
 
@@ -112,10 +112,3 @@ def save_model(path, tokens_file, type_tf):
     model = get_model(matrix, type_tf)
     model.to_csv(path, sep=";")
     logging.info("Model saved.")
-
-
-logging.basicConfig(filename='../results/index.log', filemode='w',format='%(asctime)s - %(message)s', level=logging.INFO)
-logging.info("Log created.")
-type_tf = sys.argv[0]
-tokens, model = read_config_file("index.cfg")
-save_model(model, tokens, type_tf)

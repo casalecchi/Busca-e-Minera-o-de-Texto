@@ -149,14 +149,3 @@ def get_tokens_file(read_files, path):
         for token in tokens:
             w_file.write(f"{token};{inverted_list[token]}\n")
     logging.info(f"Finished creating the inverted list file.")
-
-
-logging.basicConfig(filename='../results/gli.log', filemode='w',format='%(asctime)s - %(message)s', level=logging.INFO)
-logging.info("Log created.")
-logging.info("Downloading 'punkt' and 'stopwords' from nltk-data...")
-nltk.download('punkt')
-nltk.download('stopwords')
-logging.info("Finished downloading 'punkt' and 'stopwords'.")
-
-read_files, write_file = read_config_file("gli.cfg")
-get_tokens_file(read_files, write_file)

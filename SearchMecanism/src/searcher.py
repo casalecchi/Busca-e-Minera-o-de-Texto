@@ -126,14 +126,3 @@ def get_results(file, ranking):
                 position_ranking += 1
                 results.write(f"{query_number};{doc_infos}\n")
     logging.info("Results file created.")
-
-
-logging.basicConfig(filename='../results/busca.log', filemode='w',format='%(asctime)s - %(message)s', level=logging.INFO, force=True)
-logging.info("Log created.")
-model_file, queries_file, results_file = read_config_file("busca.cfg")
-model = get_model(model_file)
-queries = get_queries(queries_file)
-ranking = get_ranking(model, queries)
-get_results(results_file, ranking)
-
-logging.info("Finished execution.")
