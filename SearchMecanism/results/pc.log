@@ -1,0 +1,12 @@
+2023-05-08 13:38:18,117 - Log created.
+2023-05-08 13:38:18,117 - Started reading the configuration file.
+2023-05-08 13:38:18,118 - Finished reading the configuration file.
+2023-05-08 13:38:18,118 - Parsing the xml queries file.
+2023-05-08 13:38:18,122 - XML file parsed.
+2023-05-08 13:38:18,122 - Starting the generation of queries csv file.
+2023-05-08 13:38:18,123 - 99 queries processed.
+2023-05-08 13:38:18,123 - Mean of the time each query has taken to be processedin queries file: 0:00:00.000002s
+2023-05-08 13:38:18,123 - Queries csv file generated.
+2023-05-08 13:38:18,123 - Starting the generation of expected csv file.
+2023-05-08 13:38:18,125 - Mean of the time each query has taken to be processed in expected file: 0:00:00.000018s
+2023-05-08 13:38:18,125 - Expected csv file generated.

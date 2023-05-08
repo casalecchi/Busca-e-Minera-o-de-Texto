@@ -1,0 +1,14 @@
+2023-05-08 14:04:56,208 - Log created.
+2023-05-08 14:04:56,208 - Started reading the configuration file.
+2023-05-08 14:04:56,208 - Finished reading the configuration file.
+2023-05-08 14:04:56,208 - Loading model.
+2023-05-08 14:04:56,473 - Model loaded.
+2023-05-08 14:04:56,473 - Loading queries.
+2023-05-08 14:04:56,487 - Queries loaded.
+2023-05-08 14:04:56,487 - Started getting rankings of each query by each document.
+2023-05-08 14:04:56,487 - Inserting queries in model.
+2023-05-08 14:04:57,033 - Queries inserted in model. Time taken: 0:00:00.546367
+2023-05-08 14:05:00,415 - Rankings created. Time taken: 0:00:03.927878
+2023-05-08 14:05:00,416 - Generating the results file. CSV format file with 'QueryNumber; [position in ranking, doc_number, value of sim_cos]'.
+2023-05-08 14:05:00,480 - Results file created.
+2023-05-08 14:05:00,480 - Finished execution.

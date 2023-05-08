@@ -1,0 +1,10 @@
+2023-05-08 13:50:36,648 - Log created.
+2023-05-08 13:50:36,648 - Started reading the configuration file.
+2023-05-08 13:50:36,648 - Finished reading the configuration file.
+2023-05-08 13:50:36,648 - Started generating the term document matrix.
+2023-05-08 13:50:42,607 - Finished generating the term document matrix. Time taken: 0:00:05.958360.
+2023-05-08 13:50:42,607 - Matrix has 6278 tokens and 1215 documents.
+2023-05-08 13:50:44,615 - Term document matrix saved.
+2023-05-08 13:50:44,615 - Started generating the model with tf normalized. The model usually takes 4~7 minutes to be created.
+2023-05-08 13:56:24,926 - Finished generating the model. Time taken: 0:05:40.309945.
+2023-05-08 13:56:26,406 - Model saved.
