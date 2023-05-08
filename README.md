@@ -10,16 +10,14 @@ O código foi feito contendo três pastas: `src`, `data` e `results`.
 
 * Já na última pasta, `results`, é onde todo arquivo que for gerado pela execução será armazenado. Portanto, teremos o log do mecanismo de busca, além de alguns arquivos no formato CSV.
 
-Para o desenvlvimento do código, foi utilizado o miniforge3 com os pacotes listados no arquivo `requirements.txt` presente no diretório `SearchMechanism`.
+Para o desenvlvimento do código, foi utilizado o miniconda com os pacotes listados no arquivo `requirements.txt` presente no diretório `SearchMechanism`.
 
 ### Guia de uso
 
-Primeiro é necessário instalar todas as dependências. Elas estão presentes no arquivo `requirements.txt` no diretório `SearchMechanism`. Para realizar isso utilizando uma venv:
+Primeiro é necessário instalar todas as dependências presentes em `requirements.txt`. É recomendo realizar isso utilizando o próprio:
 
 ```shell
-python3 -m venv venv
-source venv/bin/activate
-pip3 install -r requirements.txt
+conda create --name <environment_name> --file requirements.txt
 ```
 
 Após a instalação, basta rodar o arquivo `main.py`, estando no diretório `src`, da seguinte maneira:
