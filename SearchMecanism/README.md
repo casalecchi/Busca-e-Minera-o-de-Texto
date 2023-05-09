@@ -1,6 +1,6 @@
-# Busca e Mineração deTexto - 2023.1
+# Search Mechanism
 
-## Search Mechanism
+## Estruturação do código
 
 O código foi feito contendo três pastas: `src`, `data` e `results`. 
 
@@ -10,11 +10,13 @@ O código foi feito contendo três pastas: `src`, `data` e `results`.
 
 * Já na última pasta, `results`, é onde todo arquivo que for gerado pela execução será armazenado. Portanto, teremos o log do mecanismo de busca, além de alguns arquivos no formato CSV.
 
-Para o desenvlvimento do código, foi utilizado o miniconda com os pacotes listados no arquivo `requirements.txt` presente no diretório `SearchMechanism`.
+Para o desenvlvimento do código, foi utilizado o miniconda com os pacotes listados no arquivo `requirements.txt`.
 
-### Guia de uso
+Também é disponibilzado o arquivo `modelo.txt` contendo a descrição do formato do modelo vetorial que é criado pelo programa.
 
-Primeiro é necessário instalar todas as dependências presentes em `requirements.txt`. É recomendo realizar isso utilizando o próprio:
+## Guia de uso
+
+Primeiro é necessário instalar todas as dependências presentes em `requirements.txt`. É recomendo realizar isso utilizando o próprio comando conda:
 
 ```shell
 conda create --name <environment_name> --file requirements.txt
