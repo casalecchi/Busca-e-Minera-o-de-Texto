@@ -1,0 +1,12 @@
+2023-05-16 11:55:28,335 - Log created.
+2023-05-16 11:55:29,632 - Module indexer started.
+2023-05-16 11:57:09,140 - Started reading the configuration file.
+2023-05-16 11:57:09,141 - Finished reading the configuration file.
+2023-05-16 11:57:09,142 - Started generating the term document matrix.
+2023-05-16 11:57:14,193 - Finished generating the term document matrix. Time taken: 0:00:05.050214.
+2023-05-16 11:57:14,193 - Matrix has 6278 tokens and 1215 documents.
+2023-05-16 11:57:16,218 - Term document matrix saved.
+2023-05-16 11:57:16,218 - Started generating the model with tf normalized. The model usually takes 4~7 minutes to be created.
+2023-05-16 12:02:53,278 - Finished generating the model. Time taken: 0:05:37.059062.
+2023-05-16 12:02:54,754 - Model saved.
+2023-05-16 12:02:54,766 - Module indexer finished execution.

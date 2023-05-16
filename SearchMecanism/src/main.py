@@ -6,12 +6,8 @@ import logging
 import sys
 
 
-# Configuramos o arquivo que será o log do sistema
-logging.basicConfig(filename='../results/search_mechanism.log', filemode='w',format='%(asctime)s - %(message)s', level=logging.INFO, force=True)
-logging.info("Log created.")
-
 # Início da execução do módulo 'processando consultas'
-logging.info("Module processing_queries started.")
+pq.start_exec()
 read, queries, expected = pq.read_config("pc.cfg")
 # Lendo arquivo com consultas
 xml_root = pq.get_xml_root(read)
@@ -19,20 +15,20 @@ xml_root = pq.get_xml_root(read)
 pq.get_queries_file(queries, xml_root)
 pq.get_expected_file(expected, xml_root)
 # Fim da execução do módulo
-logging.info("Module processing_queries finished execution.")
+pq.finish_exec()
 
 
 # Início da execução do módulo 'gerador lista invertida'
-logging.info("Module generate_inverse_list started.")
+gil.start_exec()
 read_files, write_file = gil.read_config_file("gli.cfg")
 # Gerando arquivo da lista invertida
 gil.get_tokens_file(read_files, write_file)
 # Fim da execução do módulo
-logging.info("Module processing_queries finished execution.")
+gil.finish_exec()
 
 
 # Início da execução do módulo 'indexador'
-logging.info("Module indexer started.")
+indexer.start_exec()
 # Escolha do usuário entre usar o tf normalizado ou não
 normalized = input("tf normalized [ y / n ]? ")
 if normalized.lower() == "y":
@@ -43,11 +39,11 @@ tokens, model = indexer.read_config_file("index.cfg")
 # Gerando modelo através da matriz termo documento que foi construída com a lista invertida
 indexer.save_model(model, tokens, type_tf)
 # Fim da execução do módulo
-logging.info("Module indexer finished execution.")
+indexer.finish_exec()
 
 
 # Início da execução do módulo 'buscador'
-logging.info("Module searcher started.")
+searcher.start_exec()
 model_file, queries_file, results_file = searcher.read_config_file("busca.cfg")
 # Lê o modelo na memória
 model = searcher.get_model(model_file)
@@ -58,4 +54,4 @@ ranking = searcher.get_ranking(model, queries)
 # Gera o arquivo de resultados com o arquivo de ranking gerado
 searcher.get_results(results_file, ranking)
 # Fim da execução do módulo
-logging.info("Module searcher finished exectuion.")
+searcher.finish_exec()

@@ -1,0 +1,14 @@
+2023-05-16 11:55:24,112 - Log created.
+2023-05-16 11:55:28,336 - Module processing_queries started.
+2023-05-16 11:55:28,336 - Started reading the configuration file.
+2023-05-16 11:55:28,336 - Finished reading the configuration file.
+2023-05-16 11:55:28,336 - Parsing the xml queries file.
+2023-05-16 11:55:28,340 - XML file parsed.
+2023-05-16 11:55:28,340 - Starting the generation of queries csv file.
+2023-05-16 11:55:28,341 - 99 queries processed.
+2023-05-16 11:55:28,341 - Mean of the time each query has taken to be processedin queries file: 0:00:00.000002s
+2023-05-16 11:55:28,341 - Queries csv file generated.
+2023-05-16 11:55:28,341 - Starting the generation of expected csv file.
+2023-05-16 11:55:28,343 - Mean of the time each query has taken to be processed in expected file: 0:00:00.000017s
+2023-05-16 11:55:28,343 - Expected csv file generated.
+2023-05-16 11:55:28,343 - Module processing_queries finished execution.
