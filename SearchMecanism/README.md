@@ -14,7 +14,7 @@ Para o desenvlvimento do código, foi utilizado o miniconda com os pacotes lista
 
 Também é disponibilzado o arquivo `modelo.txt` contendo a descrição do formato do modelo vetorial que é criado pelo programa.
 
-## Guia de uso
+### Guia de uso
 
 Primeiro é necessário instalar todas as dependências presentes em `requirements.txt`. É recomendo realizar isso utilizando o próprio comando conda:
 
