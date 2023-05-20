@@ -20,9 +20,9 @@ pq.finish_exec()
 
 # Início da execução do módulo 'gerador lista invertida'
 gil.start_exec()
-read_files, write_file = gil.read_config_file("gli.cfg")
+read_files, write_file, stemmer = gil.read_config_file("gli.cfg")
 # Gerando arquivo da lista invertida
-gil.get_tokens_file(read_files, write_file)
+gil.get_tokens_file(read_files, write_file, stemmer)
 # Fim da execução do módulo
 gil.finish_exec()
 
@@ -44,11 +44,11 @@ indexer.finish_exec()
 
 # Início da execução do módulo 'buscador'
 searcher.start_exec()
-model_file, queries_file, results_file = searcher.read_config_file("busca.cfg")
+model_file, queries_file, results_file, stemmer = searcher.read_config_file("busca.cfg")
 # Lê o modelo na memória
 model = searcher.get_model(model_file)
 # Lê as consultas na memória
-queries = searcher.get_queries(queries_file)
+queries = searcher.get_queries(queries_file, stemmer)
 # Usa as consultas e o modelo para gerar o ranking de documentos que mais se aproximam das consultas
 ranking = searcher.get_ranking(model, queries)
 # Gera o arquivo de resultados com o arquivo de ranking gerado

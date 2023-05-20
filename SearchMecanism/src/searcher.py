@@ -15,6 +15,7 @@ def read_config_file(config_file):
     queries_file = "../results/"
     results_file = "../results/"
     cfg_path = "../data/" + config_file
+    stemmer = False
 
     with open(cfg_path, "r") as config_file:
         for line in config_file.readlines():
@@ -27,10 +28,16 @@ def read_config_file(config_file):
                 queries_file += filename
             elif instruction == "RESULTADOS":
                 results_file += filename
+
+    if results_file.find("-stemmer") != -1:
+        stemmer = True
+        logging.info("Stemming option is ON.")
+    else:
+        logging.info("Stemming option is OFF.")
             
     logging.info("Finished reading the configuration file.")
     
-    return model_file, queries_file, results_file
+    return model_file, queries_file, results_file, stemmer
 
 
 def get_model(model_file):
@@ -45,7 +52,7 @@ def get_model(model_file):
     return model
 
 
-def get_queries(queries_file):
+def get_queries(queries_file, stemmer):
     """Retorna o arquivo de consultas como uma lista invertida em um DataFrame. O texto dessas consultas são pré-processados da mesma maneira 
     que o texto dos documentos. É necessário passar o path desse arquivo"""
 
@@ -56,7 +63,7 @@ def get_queries(queries_file):
     queries.set_index(["QueryNumber"], inplace=True)
 
     for number, text in queries.itertuples():
-        processed_text = gil.preproccess_text(text)
+        processed_text = gil.preproccess_text(text, stemmer)
         queries.at[number, "QueryText"] = processed_text
 
     logging.info("Queries loaded.")
@@ -153,7 +160,7 @@ def get_results(file, ranking):
 
     logging.basicConfig(filename='../results/busca.log', filemode='a',format='%(asctime)s - %(message)s', level=logging.INFO, force=True)
     logging.info("Generating the results file. CSV format file with 'QueryNumber; [position in ranking, doc_number, value of sim_cos]'.")
-    
+
     with open(file, 'w') as results:
         results.write("QueryNumber;DocInfos\n")
         for query in ranking.columns:

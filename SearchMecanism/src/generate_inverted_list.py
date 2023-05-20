@@ -18,8 +18,16 @@ def read_config_file(config_file):
     read_files = []
     write_file = "../results/"
     cfg_path = "../data/" + config_file
+    stemmer = False
 
     with open(cfg_path, "r") as config_file:
+        first_line = config_file.readline()
+        if first_line == "STEMMER\n":
+            logging.info("Stemming option is ON.")
+            stemmer = True
+        else:
+            logging.info("Stemming option is OFF.") 
+
         for line in config_file.readlines():
             instruction, filename = line.split("=")
             filename = filename.strip()
@@ -32,7 +40,7 @@ def read_config_file(config_file):
 
     logging.info("Finished reading the configuration file.")
     
-    return (read_files, write_file)
+    return (read_files, write_file, stemmer)
 
 
 def get_recordnum_text(file):
@@ -66,7 +74,7 @@ def get_recordnum_text(file):
     return recordnum_text
 
 
-def preproccess_text(text):
+def preproccess_text(text, stemmer):
     """Retorna o texto inserido como parâmetro pré-processado. Em suma, o texto prmeiro é tokenizado. Depois é removido suas stopwords, palavras 
     que contenham caracteres que não sejam letras e palavras menores que 3 caracteres. Por fim é aplicado um stemming em todas as palavras restantes."""
     
@@ -86,20 +94,23 @@ def preproccess_text(text):
         # Remova palavras com tamanho menor que 3 caracteres
         elif len(word) < 3:
             continue
-        # Palavra vai "entrar" mas antes vamos aplicar um stemming
-        else:
+        
+        # Inserção da palavra aplicando o stemmer ou não
+        if stemmer:
             stemmer = PorterStemmer()
             word_stemmed = stemmer.stem(word)
             filtered_text.append(word_stemmed.upper())
+        else:
+            filtered_text.append(word.upper())
     
     return filtered_text
 
 
-def word_frequency(text, record_num):
+def word_frequency(text, record_num, stemmer):
     """Retorna a lista invertida para um único texto passado."""
 
     # Primeiro pré-processamos o texto
-    tokenized_text = preproccess_text(text)
+    tokenized_text = preproccess_text(text, stemmer)
     frequency_dict = {}
     
     for word in tokenized_text:
@@ -113,7 +124,7 @@ def word_frequency(text, record_num):
     return frequency_dict
 
 
-def get_inverted_list(read_files):
+def get_inverted_list(read_files, stemmer):
     """Geração de uma única lista invertida juntando todos os arquivos de leitura. É passado uma lista contendo os paths dos arquivos XML
     de leitura. A lista é retornada como um dicionário, contendo uma palavra como chave e uma lista com os documentos que aparecessem como valor."""
 
@@ -134,7 +145,7 @@ def get_inverted_list(read_files):
         # Depois, pega cada record
         for record_num in file_record_nums:
             # Faz o dicionário de frequência de um record
-            record_dict = word_frequency(file_records[record_num], record_num)
+            record_dict = word_frequency(file_records[record_num], record_num, stemmer)
             
             # Pegar o dicionário de frequência e juntar no geral
             used_tokens = list(record_dict.keys())
@@ -158,7 +169,7 @@ def get_inverted_list(read_files):
     
     return inverted_list
 
-def get_tokens_file(read_files, path):
+def get_tokens_file(read_files, path, stemmer):
     """É criado o arquivo de escrita, contendo a lista invertida. Passamos a lista com os arquivos de leitura e o path do arquivo que 
     será escrito."""
 
@@ -166,7 +177,7 @@ def get_tokens_file(read_files, path):
     logging.info(f"Started creating the inverted list file.")
     
     with open(path, 'w') as w_file:
-        inverted_list = get_inverted_list(read_files)
+        inverted_list = get_inverted_list(read_files, stemmer)
         tokens = list(inverted_list.keys())
         w_file.write("Token;Appearance\n")
         

@@ -1,6 +1,6 @@
 # Search Mechanism
 
-## Estruturação do código
+## Estruturação do código - Trabalho 1
 
 O código foi feito contendo três pastas: `src`, `data` e `results`. 
 
@@ -31,3 +31,11 @@ python3 main.py
 Durante a execução, será necessário indicar no próprio terminal se o parâmetro `tf` será utilizado de maneira normalizada ou não. Para isso basta seguir as instruções que serão printadas no terminal.
 
 A geração do modelo, nos testes realizados, levou em torno de 6 minutos para ser completada. Uma barra de progresso com a estimativa de tempo foi utilizada para que seja mais fácil essa visualização. 
+
+## Avaliação do modelo - Trabalho 2
+
+Nesse segundo trabalho é pedido para que o modelo possa ser avaliado utilizando diferentes métricas. Antes de irmos até elas, temos algumas mudanças importantes no funcionamento do mecanismo. Ambas ocorrem detnro do arquivo de configuração de dois módulos. 
+
+A primeira mudança é presente no arquivo de configuração do módulo "Gerar Lista Invertida" (`gli.cfg`). Na primeira linha, onde teremos a indicação se será utilizado um stemmer ou não. Portanto as opções para essa linha são utilizar a palavra "STEMMER" ou "NOSTEMMER".
+
+A segunda mudança se dá no arquivo de configuração do módulo "Buscador" (`busca.cfg`). Aqui indicaremos se o texto das consultas passarão ou não por um stemmer. Isso será feito adicionando no nome de arquivo de resultados um "-stemmer", em caso positivo, ou "-nostemmer", em caso negativo.

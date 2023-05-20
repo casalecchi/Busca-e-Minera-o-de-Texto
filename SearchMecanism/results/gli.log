@@ -1,24 +1,25 @@
-2023-05-16 11:55:24,259 - Log created.
-2023-05-16 11:55:24,259 - Downloading 'punkt' and 'stopwords' from nltk-data...
-2023-05-16 11:55:28,145 - Finished downloading 'punkt' and 'stopwords'.
-2023-05-16 11:55:28,343 - Module generate_inverted_list started.
-2023-05-16 11:55:28,343 - Started reading the configuration file.
-2023-05-16 11:55:28,343 - Finished reading the configuration file.
-2023-05-16 11:55:28,343 - Started creating the inverted list file.
-2023-05-16 11:55:28,343 - Started creating the inverted list.
-2023-05-16 11:55:28,343 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf74.xml
-2023-05-16 11:55:28,364 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf74.xml. 167 records in file. Time taken: 0:00:00.020352s
-2023-05-16 11:55:28,522 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf75.xml
-2023-05-16 11:55:28,534 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf75.xml. 188 records in file. Time taken: 0:00:00.011768s
-2023-05-16 11:55:28,725 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf76.xml
-2023-05-16 11:55:28,745 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf76.xml. 227 records in file. Time taken: 0:00:00.018997s
-2023-05-16 11:55:28,969 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf77.xml
-2023-05-16 11:55:28,983 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf77.xml. 199 records in file. Time taken: 0:00:00.013018s
-2023-05-16 11:55:29,174 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf78.xml
-2023-05-16 11:55:29,195 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf78.xml. 199 records in file. Time taken: 0:00:00.020258s
-2023-05-16 11:55:29,371 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf79.xml
-2023-05-16 11:55:29,384 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf79.xml. 259 records in file. Time taken: 0:00:00.012747s
-2023-05-16 11:55:29,627 - 6 files procesed. Average time: 0:00:00.213821s.
-2023-05-16 11:55:29,627 - Finished creating the inverted list.
-2023-05-16 11:55:29,632 - Finished creating the inverted list file.
-2023-05-16 11:55:29,632 - Module generate_inverted_list finished execution.
+2023-05-20 14:21:46,726 - Log created.
+2023-05-20 14:21:46,726 - Downloading 'punkt' and 'stopwords' from nltk-data...
+2023-05-20 14:21:46,913 - Finished downloading 'punkt' and 'stopwords'.
+2023-05-20 14:21:47,121 - Module generate_inverted_list started.
+2023-05-20 14:21:47,121 - Started reading the configuration file.
+2023-05-20 14:21:47,122 - Stemming option is ON.
+2023-05-20 14:21:47,122 - Finished reading the configuration file.
+2023-05-20 14:21:47,122 - Started creating the inverted list file.
+2023-05-20 14:21:47,122 - Started creating the inverted list.
+2023-05-20 14:21:47,122 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf74.xml
+2023-05-20 14:21:47,144 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf74.xml. 167 records in file. Time taken: 0:00:00.022489s
+2023-05-20 14:21:47,304 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf75.xml
+2023-05-20 14:21:47,316 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf75.xml. 188 records in file. Time taken: 0:00:00.012091s
+2023-05-20 14:21:47,507 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf76.xml
+2023-05-20 14:21:47,526 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf76.xml. 227 records in file. Time taken: 0:00:00.018942s
+2023-05-20 14:21:47,752 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf77.xml
+2023-05-20 14:21:47,765 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf77.xml. 199 records in file. Time taken: 0:00:00.012860s
+2023-05-20 14:21:47,960 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf78.xml
+2023-05-20 14:21:47,980 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf78.xml. 199 records in file. Time taken: 0:00:00.020093s
+2023-05-20 14:21:48,157 - Started creating the dict record_num: text from file: ../data/CysticFibrosis/cf79.xml
+2023-05-20 14:21:48,170 - Finished creating the dict record_num: text from file: ../data/CysticFibrosis/cf79.xml. 259 records in file. Time taken: 0:00:00.012767s
+2023-05-20 14:21:48,413 - 6 files procesed. Average time: 0:00:00.215206s.
+2023-05-20 14:21:48,413 - Finished creating the inverted list.
+2023-05-20 14:21:48,418 - Finished creating the inverted list file.
+2023-05-20 14:21:48,419 - Module generate_inverted_list finished execution.
