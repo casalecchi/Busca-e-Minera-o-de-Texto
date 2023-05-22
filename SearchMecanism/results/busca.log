@@ -1,16 +1,16 @@
-2023-05-20 14:21:47,114 - Log created.
-2023-05-20 14:27:40,752 - Module searcher started.
-2023-05-20 14:27:40,752 - Started reading the configuration file.
-2023-05-20 14:27:40,752 - Stemming option is ON.
-2023-05-20 14:27:40,752 - Finished reading the configuration file.
-2023-05-20 14:27:40,752 - Loading model.
-2023-05-20 14:27:41,004 - Model loaded.
-2023-05-20 14:27:41,005 - Loading queries.
-2023-05-20 14:27:41,019 - Queries loaded.
-2023-05-20 14:27:41,019 - Started getting rankings of each query by each document.
-2023-05-20 14:27:41,019 - Inserting queries in model.
-2023-05-20 14:27:41,453 - Queries inserted in model. Time taken: 0:00:00.433840
-2023-05-20 14:27:44,886 - Rankings created. Time taken: 0:00:03.867074
-2023-05-20 14:27:44,888 - Generating the results file. CSV format file with 'QueryNumber; [position in ranking, doc_number, value of sim_cos]'.
-2023-05-20 14:27:44,953 - Results file created.
-2023-05-20 14:27:44,953 - Module searcher finished execution.
+2023-05-21 17:53:55,074 - Log created.
+2023-05-21 18:02:46,321 - Module searcher started.
+2023-05-21 18:02:46,322 - Started reading the configuration file.
+2023-05-21 18:02:46,322 - Stemming option is OFF.
+2023-05-21 18:02:46,322 - Finished reading the configuration file.
+2023-05-21 18:02:46,322 - Loading model.
+2023-05-21 18:02:46,696 - Model loaded.
+2023-05-21 18:02:46,696 - Loading queries.
+2023-05-21 18:02:46,704 - Queries loaded.
+2023-05-21 18:02:46,704 - Started getting rankings of each query by each document.
+2023-05-21 18:02:46,704 - Inserting queries in model.
+2023-05-21 18:02:47,473 - Queries inserted in model. Time taken: 0:00:00.768700
+2023-05-21 18:02:51,099 - Rankings created. Time taken: 0:00:04.394532
+2023-05-21 18:02:51,101 - Generating the results file. CSV format file with 'QueryNumber; [position in ranking, doc_number, value of sim_cos]'.
+2023-05-21 18:02:51,160 - Results file created.
+2023-05-21 18:02:51,160 - Module searcher finished execution.
